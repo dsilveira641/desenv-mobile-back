@@ -13,7 +13,7 @@ export class UsersController {
             return this.userService.findAll();
         }
         catch (error) {
-            this.logger.error("Problemas com o usuário");
+            this.logger.error("Problemas com o usuário!");
         }
     }
 }

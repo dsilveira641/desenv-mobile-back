@@ -11,7 +11,7 @@ export class AuthService {
 
     async signIn(userEmail: string, pass: string): Promise<any> {
         const user = await this.usersService.findByEmail(userEmail);
-        console.log("[signIn]", user, pass);
+        
         if (!user) {
             throw new UnauthorizedException('Credenciais inválidas');
         }

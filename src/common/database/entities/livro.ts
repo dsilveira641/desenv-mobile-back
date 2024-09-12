@@ -11,12 +11,12 @@ export class livro {
     @Column({ name: 'LIV_Autor' })
     autor: string
 
-    @Column({ name: "LIV_AnoPublicacao" })
+    @Column({ name: "LIV_AnoPublicacao", type: 'timestamptz' })
     dataPublicacao: Date;
 
     @Column({ name: "LIV_Disponivel" })
     disponivel: boolean
 
-    @Column({ name: "LIV_Quantidade" })
+    @Column({ name: "LIV_Quantidade", default: 1 })
     quantidade: number
 }

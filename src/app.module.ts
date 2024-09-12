@@ -4,13 +4,13 @@ import { AppService } from './app.service';
 import { AuthModule } from './auth/auth.module';
 import { DatabaseModule } from './common/database/database.module'
 import { UsersModule } from './users/modules/users.module';
-import { LivrosService } from './servies/livros/livros.service';
-import { LivrosService } from './livros/services/livros/livros.service';
-import { LivrosController } from './livros/controllers/livros/livros.controller';
+import { LivrosModule } from './livros/modules/livros/livros.module';
+import { EmprestimosModule } from './emprestimo/modules/emprestimos/emprestimos.module';
+import { EmprestimosService } from './emprestimo/services/emprestimos/emprestimos.service';
 
 @Module({
-  imports: [DatabaseModule, AuthModule, UsersModule],
-  controllers: [AppController, LivrosController],
-  providers: [AppService, LivrosService],
+  imports: [DatabaseModule, AuthModule, UsersModule, LivrosModule, EmprestimosModule],
+  controllers: [AppController],
+  providers: [AppService],
 })
 export class AppModule {}

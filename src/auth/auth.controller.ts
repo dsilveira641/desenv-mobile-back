@@ -1,8 +1,8 @@
 import { Body, Controller, Get, HttpCode, HttpStatus, Post, UseGuards } from '@nestjs/common';
 import { AuthService } from './auth.service';
 import { AuthGuard } from './auth.guard';
-import { ApiOperation } from '@nestjs/swagger';
-
+import { ApiOperation, ApiTags } from '@nestjs/swagger';
+@ApiTags("Autenticação")
 @Controller('auth')
 export class AuthController {
     constructor(private authService: AuthService) {}

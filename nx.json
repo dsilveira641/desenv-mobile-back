@@ -1,0 +1,40 @@
+{
+  "$schema": "./node_modules/nx/schemas/nx-schema.json",
+  "defaultBase": "main",
+  "targetDefaults": {
+    "start": {
+      "cache": true
+    },
+    "start:dev": {
+      "cache": true
+    },
+    "lint": {
+      "cache": true
+    },
+    "test": {
+      "cache": true
+    },
+    "test:watch": {
+      "cache": true
+    },
+    "test:cov": {
+      "cache": true
+    },
+    "test:debug": {
+      "cache": true
+    },
+    "typeorm": {
+      "cache": true
+    },
+    "migration:run": {
+      "cache": true
+    },
+    "migration:show": {
+      "cache": true
+    },
+    "migration:rollback": {
+      "cache": true
+    }
+  },
+  "nxCloudId": "66f32ba520fc841423f20a8d"
+}

@@ -14,7 +14,9 @@ export const dataSourceOptions: DataSourceOptions = {
     url: process.env.TYPEORM_URL,
     entities: [`${__dirname}/entities/{.ts,*.js}`],
     migrations: [`${__dirname}/migrations/{.ts,*.js}`],
-
+    ssl: {
+        rejectUnauthorized: false,
+    },
     // NÃO ALTERAR PARA TRUE OS VALORES ENTRE ESSES COMENTÁRIOS
     synchronize: false,
     migrationsRun: false

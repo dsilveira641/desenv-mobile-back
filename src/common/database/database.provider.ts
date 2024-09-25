@@ -11,6 +11,7 @@ export const dataSourceOptions: DataSourceOptions = {
     username: process.env.TYPEORM_USERNAME,
     password: process.env.TYPEORM_PASSWORD,
     database: process.env.TYPEORM_DATABASE,
+    url: process.env.TYPEORM_URL,
     entities: [`${__dirname}/entities/{.ts,*.js}`],
     migrations: [`${__dirname}/migrations/{.ts,*.js}`],
 

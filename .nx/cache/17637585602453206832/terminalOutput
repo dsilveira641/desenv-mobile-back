@@ -1,0 +1,25 @@
+
+> desenv-mobile-back@0.0.1 migration:run
+> npm run typeorm -- migration:run
+
+
+> desenv-mobile-back@0.0.1 typeorm
+> npm run build && npx typeorm -d dist/common/database/database.provider.js migration:run
+
+
+> desenv-mobile-back@0.0.1 build
+> nest build
+
+[90m[4mquery:[24m[39m [94mSELECT[39m * [94mFROM[39m [95mcurrent_schema[39m()
+[90m[4mquery:[24m[39m [94mSELECT[39m version();
+[90m[4mquery:[24m[39m [94mSELECT[39m * [94mFROM[39m "information_schema"."tables" [94mWHERE[39m "table_schema" = [37m'public'[39m [94mAND[39m "table_name" = [37m'migrations'[39m
+[90m[4mquery:[24m[39m [94mSELECT[39m * [94mFROM[39m "migrations" "migrations" [94mORDER[39m [94mBY[39m "id" [94mDESC[39m
+[4m4 migrations are already loaded in the database.[24m
+[4m5 migrations were found in the source code.[24m
+[4mAlunos1726848833251 is the last executed migration. It was executed on Fri Sep 20 2024 13:13:53 GMT-0300 (Horário Padrão de Brasília).[24m
+[4m1 migrations are new migrations must be executed.[24m
+[90m[4mquery:[24m[39m [94mSTART[39m TRANSACTION
+[90m[4mquery:[24m[39m [94mCREATE[39m [94mTABLE[39m "professores" ("PRO_Id" SERIAL [94mNOT[39m [94mNULL[39m, "PRO_Nome" [95mvarchar[39m([32m100[39m) [94mNOT[39m [94mNULL[39m, "PRO_Certificados" [95mvarchar[39m([32m255[39m), [94mCONSTRAINT[39m "PK_cb2f5be389e54091005419c22bd" [94mPRIMARY[39m KEY ("PRO_Id"))
+[90m[4mquery:[24m[39m [94mINSERT[39m [94mINTO[39m "migrations"("timestamp", "name") [94mVALUES[39m ($[32m1[39m, $[32m2[39m) [90m-- PARAMETERS: [1727290445927,"Professores1727290445927"][39m
+[4mMigration Professores1727290445927 has been  executed successfully.[24m
+[90m[4mquery:[24m[39m [94mCOMMIT[39m

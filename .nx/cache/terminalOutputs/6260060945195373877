@@ -1,0 +1,18 @@
+
+> desenv-mobile-back@0.0.1 migration:show
+> npm run typeorm -- migration:show
+
+
+> desenv-mobile-back@0.0.1 typeorm
+> npm run build && npx typeorm -d dist/common/database/database.provider.js migration:show
+
+
+> desenv-mobile-back@0.0.1 build
+> nest build
+
+[4m[X] 1 Usuario1725991485983[24m
+[4m[X] 2 Livro1726018191510[24m
+[4m[X] 3 Emprestimo1726019357843[24m
+[4m[X] 4 Alunos1726848833251[24m
+[4m[X] 5 Professores1727290445927[24m
+[4m[ ] Disciplinas1727291825356[24m

@@ -5,9 +5,9 @@ import { LivrosController } from 'src/livros/controllers/livros/livros.controlle
 import { LivrosService } from 'src/livros/services/livros/livros.service';
 
 @Module({
-    imports: [TypeOrmModule.forFeature([livro])],
-    controllers: [LivrosController],
-    providers: [LivrosService],
-    exports: [LivrosService]
+  imports: [TypeOrmModule.forFeature([livro])],
+  controllers: [LivrosController],
+  providers: [LivrosService],
+  exports: [LivrosService],
 })
 export class LivrosModule {}

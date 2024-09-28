@@ -7,9 +7,9 @@ import { EmprestimosController } from 'src/emprestimo/controllers/emprestimos/em
 import { EmprestimosService } from 'src/emprestimo/services/emprestimos/emprestimos.service';
 
 @Module({
-    imports: [TypeOrmModule.forFeature([Emprestimo, livro, User])],
-    controllers: [EmprestimosController],
-    providers: [EmprestimosService],
-    exports: [EmprestimosService]
+  imports: [TypeOrmModule.forFeature([Emprestimo, livro, User])],
+  controllers: [EmprestimosController],
+  providers: [EmprestimosService],
+  exports: [EmprestimosService],
 })
 export class EmprestimosModule {}

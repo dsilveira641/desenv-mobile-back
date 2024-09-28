@@ -1,50 +1,50 @@
-import { MigrationInterface, QueryRunner, Table } from "typeorm";
+import { MigrationInterface, QueryRunner, Table } from 'typeorm';
 
 export class Usuario1725991485983 implements MigrationInterface {
-    
-    private tableName = "usuario";
+  private tableName = 'usuario';
 
-    public async up(queryRunner: QueryRunner): Promise<void> {
-        queryRunner.createTable(new Table({
-            name: this.tableName,
-            columns: [
-                {
-                    name: "USR_Id",
-                    type: "int",
-                    isPrimary: true,
-                    isGenerated: true,
-                    generationStrategy: "increment",
-                    isNullable: false
-                },
-                {
-                    name: "USR_Nome",
-                    type: "varchar",
-                    length: "100",
-                    isNullable: false
-                },
-                {
-                    name: "USR_Email",
-                    type: "varchar",
-                    isNullable: false,
-                    isUnique: true
-                },
-                {
-                    name: "USR_Senha",
-                    type: "varchar",
-                    isNullable: false
-                },
-                {
-                    name: "USR_TipoUsuario",
-                    type: "varchar",
-                    length: "50",
-                    isNullable: false
-                }
-            ]
-        }))
-    }
+  public async up(queryRunner: QueryRunner): Promise<void> {
+    queryRunner.createTable(
+      new Table({
+        name: this.tableName,
+        columns: [
+          {
+            name: 'USR_Id',
+            type: 'int',
+            isPrimary: true,
+            isGenerated: true,
+            generationStrategy: 'increment',
+            isNullable: false,
+          },
+          {
+            name: 'USR_Nome',
+            type: 'varchar',
+            length: '100',
+            isNullable: false,
+          },
+          {
+            name: 'USR_Email',
+            type: 'varchar',
+            isNullable: false,
+            isUnique: true,
+          },
+          {
+            name: 'USR_Senha',
+            type: 'varchar',
+            isNullable: false,
+          },
+          {
+            name: 'USR_TipoUsuario',
+            type: 'varchar',
+            length: '50',
+            isNullable: false,
+          },
+        ],
+      }),
+    );
+  }
 
-    public async down(queryRunner: QueryRunner): Promise<void> {
-        queryRunner.query("DROP TABLE " + this.tableName)
-    }
-
+  public async down(queryRunner: QueryRunner): Promise<void> {
+    queryRunner.query('DROP TABLE ' + this.tableName);
+  }
 }

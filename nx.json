@@ -1,11 +1,22 @@
 {
   "$schema": "./node_modules/nx/schemas/nx-schema.json",
-  "defaultBase": "main",
   "targetDefaults": {
+    "build": {
+      "cache": true
+    },
+    "format": {
+      "cache": true
+    },
     "start": {
       "cache": true
     },
     "start:dev": {
+      "cache": true
+    },
+    "start:debug": {
+      "cache": true
+    },
+    "start:prod": {
       "cache": true
     },
     "lint": {
@@ -23,6 +34,9 @@
     "test:debug": {
       "cache": true
     },
+    "test:e2e": {
+      "cache": true
+    },
     "typeorm": {
       "cache": true
     },
@@ -34,7 +48,25 @@
     },
     "migration:rollback": {
       "cache": true
+    },
+    "heroku-postbuild": {
+      "cache": true
     }
   },
-  "nxCloudId": "66f32ba520fc841423f20a8d"
+  "defaultBase": "master",
+  "plugins": [
+    {
+      "plugin": "@nx/eslint/plugin",
+      "options": {
+        "targetName": "eslint:lint"
+      }
+    },
+    {
+      "plugin": "@nx/jest/plugin",
+      "options": {
+        "targetName": "test"
+      }
+    }
+  ],
+  "nxCloudId": "66f834bb175f7c6817be4901"
 }

@@ -1,9 +1,10 @@
 import { Body, Controller, Delete, Get, Logger, Param, Patch, Post, Put } from '@nestjs/common';
-import { ApiOperation, ApiResponse } from '@nestjs/swagger';
+import { ApiOperation, ApiResponse, ApiTags } from '@nestjs/swagger';
 import { livro } from 'src/common/database/entities/livro';
 import { CreateLivroDto } from 'src/livros/dto/create-livro.dto';
 import { LivrosService } from 'src/livros/services/livros/livros.service';
 
+@ApiTags("Livros")
 @Controller('livros')
 export class LivrosController {
     private readonly logger = new Logger(LivrosController.name);

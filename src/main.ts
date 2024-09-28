@@ -8,7 +8,6 @@ async function bootstrap() {
     .setTitle('API Desenvolvimento Mobile')
     .setDescription('Backend de desenvolvimento mobile, projeto escolinha')
     .setVersion('1.0')
-    .addTag('cats')
     .build();
   const document = SwaggerModule.createDocument(app, config);
   SwaggerModule.setup('api', app, document);

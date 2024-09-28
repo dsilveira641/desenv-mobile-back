@@ -1,8 +1,9 @@
 import { Controller, Get, Param, Post } from '@nestjs/common';
-import { ApiOperation } from '@nestjs/swagger';
+import { ApiOperation, ApiTags } from '@nestjs/swagger';
 import { Emprestimo } from 'src/common/database/entities/emprestimo';
 import { EmprestimosService } from 'src/emprestimo/services/emprestimos/emprestimos.service';
 
+@ApiTags("Emprestimos")
 @Controller('emprestimos')
 export class EmprestimosController {
     constructor(private readonly service: EmprestimosService) {}

@@ -1,9 +1,9 @@
 import { Body, Controller, Delete, Get, Logger, Param, Post } from '@nestjs/common';
 import { UsersService } from '../services/users.service';
 import { User } from 'src/common/database/entities/users';
-import { ApiOperation, ApiResponse } from '@nestjs/swagger';
+import { ApiOperation, ApiResponse, ApiTags } from '@nestjs/swagger';
 import { CreateUserDto } from '../dto/create-user.dto';
-
+@ApiTags("Usuários")
 @Controller('api/users')
 export class UsersController {
     private readonly logger = new Logger(UsersController.name);

@@ -6,6 +6,8 @@ import { DatabaseModule } from './common/database/database.module';
 import { UsersModule } from './users/modules/users.module';
 import { LivrosModule } from './livros/modules/livros/livros.module';
 import { EmprestimosModule } from './emprestimo/modules/emprestimos/emprestimos.module';
+import { DisciplinasModule } from './disciplinas/modules/disciplinas/disciplinas.module';
+import { DisciplinasService } from './disciplinas/services/disciplinas/disciplinas.service';
 
 @Module({
   imports: [
@@ -14,6 +16,7 @@ import { EmprestimosModule } from './emprestimo/modules/emprestimos/emprestimos.
     UsersModule,
     LivrosModule,
     EmprestimosModule,
+    DisciplinasModule,
   ],
   controllers: [AppController],
   providers: [AppService],

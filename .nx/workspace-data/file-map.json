@@ -82,6 +82,10 @@
           "hash": "10515070060548282188"
         },
         {
+          "file": "bash.exe.stackdump",
+          "hash": "13227935670975993161"
+        },
+        {
           "file": "nest-cli.json",
           "hash": "789240945379598733"
         },
@@ -91,7 +95,7 @@
         },
         {
           "file": "package-lock.json",
-          "hash": "9885596070388322387"
+          "hash": "8887601381384944039"
         },
         {
           "file": "package.json",
@@ -152,7 +156,7 @@
         },
         {
           "file": "src/app.module.ts",
-          "hash": "15161208946481525646"
+          "hash": "837750323854070162"
         },
         {
           "file": "src/app.service.ts",
@@ -164,7 +168,7 @@
         },
         {
           "file": "src/auth/auth.controller.ts",
-          "hash": "16897305285509295911"
+          "hash": "11948384873573531426"
         },
         {
           "file": "src/auth/auth.guard.ts",
@@ -195,12 +199,24 @@
           "hash": "14845453413858359521"
         },
         {
+          "file": "src/common/database/entities/Disciplinas.ts",
+          "hash": "8419657900314608526"
+        },
+        {
+          "file": "src/common/database/entities/alunos.ts",
+          "hash": "1071621488630911226"
+        },
+        {
           "file": "src/common/database/entities/emprestimo.ts",
           "hash": "4487475160730412750"
         },
         {
           "file": "src/common/database/entities/livro.ts",
           "hash": "7634308105756049302"
+        },
+        {
+          "file": "src/common/database/entities/professores.ts",
+          "hash": "10226655631615810586"
         },
         {
           "file": "src/common/database/entities/users.ts",
@@ -219,12 +235,44 @@
           "hash": "6312966152882432960"
         },
         {
+          "file": "src/common/database/migrations/1726848833251-alunos.ts",
+          "hash": "1817385584364172096"
+        },
+        {
+          "file": "src/common/database/migrations/1727290445927-professores.ts",
+          "hash": "1433600034232425591"
+        },
+        {
+          "file": "src/common/database/migrations/1727291825356-disciplinas.ts",
+          "hash": "13924808121079921311"
+        },
+        {
+          "file": "src/disciplinas/controllers/disciplinas/disciplinas.controller.spec.ts",
+          "hash": "12715432556033458700"
+        },
+        {
+          "file": "src/disciplinas/controllers/disciplinas/disciplinas.controller.ts",
+          "hash": "9154993984897959070"
+        },
+        {
+          "file": "src/disciplinas/modules/disciplinas/disciplinas.module.ts",
+          "hash": "18141289372951243835"
+        },
+        {
+          "file": "src/disciplinas/services/disciplinas/disciplinas.service.spec.ts",
+          "hash": "16418101126143878581"
+        },
+        {
+          "file": "src/disciplinas/services/disciplinas/disciplinas.service.ts",
+          "hash": "5821181109476432031"
+        },
+        {
           "file": "src/emprestimo/controllers/emprestimos/emprestimos.controller.spec.ts",
           "hash": "14769417430339958768"
         },
         {
           "file": "src/emprestimo/controllers/emprestimos/emprestimos.controller.ts",
-          "hash": "17548143538187016837"
+          "hash": "12832875066381829992"
         },
         {
           "file": "src/emprestimo/modules/emprestimos/emprestimos.module.ts",
@@ -244,7 +292,7 @@
         },
         {
           "file": "src/livros/controllers/livros/livros.controller.ts",
-          "hash": "14634847680087458935"
+          "hash": "11644486507827493898"
         },
         {
           "file": "src/livros/dto/create-livro.dto.ts",
@@ -264,7 +312,7 @@
         },
         {
           "file": "src/main.ts",
-          "hash": "16147186284893664427"
+          "hash": "7142462951309515002"
         },
         {
           "file": "src/users/controllers/users.controller.spec.ts",
@@ -272,7 +320,7 @@
         },
         {
           "file": "src/users/controllers/users.controller.ts",
-          "hash": "3463138294069557593"
+          "hash": "12050288520172062721"
         },
         {
           "file": "src/users/dto/create-user.dto.ts",

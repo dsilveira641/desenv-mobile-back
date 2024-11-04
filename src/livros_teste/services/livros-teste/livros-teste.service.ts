@@ -16,8 +16,11 @@ export class LivrosTesteService {
     //     return await this.livroRepository.save(livro);
     // }
 
-    async findAll(): Promise<LivroTeste[]> {
-        return await this.livroRepository.find();
+    async findAll(limit: number, offset: number): Promise<LivroTeste[]> {
+        return await this.livroRepository.find({
+            take: limit,
+            skip: offset
+        });
     }
 
     async findOne(id: number): Promise<LivroTeste> {

@@ -2439,15 +2439,6 @@
         "hash": "sha512-ZjfKk/AgOukNotCzTHkeQxGoxZldG89273Itw2irJ+CRZU5BRXBiFVWXgTN05oYbgeM0O5EWyxpwe+0x+Qx1nQ=="
       }
     },
-    "npm:@nx/nx-darwin-arm64": {
-      "type": "npm",
-      "name": "npm:@nx/nx-darwin-arm64",
-      "data": {
-        "version": "19.8.2",
-        "packageName": "@nx/nx-darwin-arm64",
-        "hash": "sha512-O06sOObpaF3UQrx6R5s0kFOrhrk/N20rKhOMaD5Qxw6lmVr6TGGH1epGpD8ES7ZPS+p7FUtU9/FPHwY02BZfBg=="
-      }
-    },
     "npm:@nx/nx-darwin-x64@20.0.1": {
       "type": "npm",
       "name": "npm:@nx/nx-darwin-x64@20.0.1",
@@ -2455,15 +2446,6 @@
         "version": "20.0.1",
         "packageName": "@nx/nx-darwin-x64",
         "hash": "sha512-wBKQWktP82bJdqvXczroNk79NNZReofIU7wa+A0M82LTeC7Tqq5/sQu8FJAewpEQkHmnPxByVaaBAWDbQ3g07g=="
-      }
-    },
-    "npm:@nx/nx-darwin-x64": {
-      "type": "npm",
-      "name": "npm:@nx/nx-darwin-x64",
-      "data": {
-        "version": "19.8.2",
-        "packageName": "@nx/nx-darwin-x64",
-        "hash": "sha512-hRFA7xpnIeMUF5FiDh681fxSx/EzkFYZ+UE/XBfzbc+T1neRy7NB2vMEa/WMsN0+Y5+NXtibx1akEDD6VOqeJA=="
       }
     },
     "npm:@nx/nx-freebsd-x64@20.0.1": {
@@ -2475,15 +2457,6 @@
         "hash": "sha512-tB6YxG6BUuGJs+TdjXtTwvwzKiA032A7R2ExS3zkt4S5aXorNeNBHpsLc/rlO5pz+Fm84se8FE8+b3XbQm7UzQ=="
       }
     },
-    "npm:@nx/nx-freebsd-x64": {
-      "type": "npm",
-      "name": "npm:@nx/nx-freebsd-x64",
-      "data": {
-        "version": "19.8.2",
-        "packageName": "@nx/nx-freebsd-x64",
-        "hash": "sha512-GwZUtUQJt2LrZFB9r29ZYQ9I2r76pg+Lwj7vgrFAq+UHcLejHYyLvhDPoRfKWdASdegI3M5jbh8Cvamd+sgbNA=="
-      }
-    },
     "npm:@nx/nx-linux-arm-gnueabihf@20.0.1": {
       "type": "npm",
       "name": "npm:@nx/nx-linux-arm-gnueabihf@20.0.1",
@@ -2491,15 +2464,6 @@
         "version": "20.0.1",
         "packageName": "@nx/nx-linux-arm-gnueabihf",
         "hash": "sha512-PbkVNonpBM0XyXF0ymruqakdt+2WzBZav0LjrJltVdhwn/KET7yX0X+nsIcRWZVLbUEb0ymigCvWZk3mxFBByQ=="
-      }
-    },
-    "npm:@nx/nx-linux-arm-gnueabihf": {
-      "type": "npm",
-      "name": "npm:@nx/nx-linux-arm-gnueabihf",
-      "data": {
-        "version": "19.8.2",
-        "packageName": "@nx/nx-linux-arm-gnueabihf",
-        "hash": "sha512-+OtoU5tXOLRv0ufy8ifD6EHn+VOjnC8mFIaaBO/cb/YEW1MTZq1RqKd4e1O9sjAloTe4X3mydw/Ue333+FqIww=="
       }
     },
     "npm:@nx/nx-linux-arm64-gnu@20.0.1": {
@@ -2511,15 +2475,6 @@
         "hash": "sha512-jL24biEd2Ikngm600ggfmmlxvYwcB+HMMgY/x8/tlX8j7iDr0sIITizIqsKIub+Dux1/UAw/Fi3tvfUNAsfm9g=="
       }
     },
-    "npm:@nx/nx-linux-arm64-gnu": {
-      "type": "npm",
-      "name": "npm:@nx/nx-linux-arm64-gnu",
-      "data": {
-        "version": "19.8.2",
-        "packageName": "@nx/nx-linux-arm64-gnu",
-        "hash": "sha512-rH7WSvoh1nvYmQs3cd4nBDPilEYIGTUOZF2eXPBqSu1K6938tu1Uf1zXzqRK7o016GoVepiD0VRVYWD3R82nRQ=="
-      }
-    },
     "npm:@nx/nx-linux-arm64-musl@20.0.1": {
       "type": "npm",
       "name": "npm:@nx/nx-linux-arm64-musl@20.0.1",
@@ -2527,15 +2482,6 @@
         "version": "20.0.1",
         "packageName": "@nx/nx-linux-arm64-musl",
         "hash": "sha512-239OlALQwu43Abkp2wGe7QhKlc9IKRgpq/RK4hG54zLZk29QYs/QxZ/QAtd6kfhGyRwCYUCQj1liGuljV0we6w=="
-      }
-    },
-    "npm:@nx/nx-linux-arm64-musl": {
-      "type": "npm",
-      "name": "npm:@nx/nx-linux-arm64-musl",
-      "data": {
-        "version": "19.8.2",
-        "packageName": "@nx/nx-linux-arm64-musl",
-        "hash": "sha512-a7vuWDOcqHL0S0gQYYz8DDRmNFs4NOd7A+BTgBRPX54r0pS82tKF2ZsP48TAr9WHyjsTPis5LlFw8VhLrjzdLA=="
       }
     },
     "npm:@nx/nx-linux-x64-gnu@20.0.1": {
@@ -2583,15 +2529,6 @@
         "hash": "sha512-cy1ZfcxL4hT3ipkakXAgFjVxazoczGzpWPqMmR2On9Aw41V16CzukDvbfi/azHzf2bPhVk/TGX+9Odiz7saRBA=="
       }
     },
-    "npm:@nx/nx-win32-arm64-msvc": {
-      "type": "npm",
-      "name": "npm:@nx/nx-win32-arm64-msvc",
-      "data": {
-        "version": "19.8.2",
-        "packageName": "@nx/nx-win32-arm64-msvc",
-        "hash": "sha512-ZkSZBxGrGXDqwRxC4WyHR3sAUIH6akk1rTDvqTr1nKPribs53cqEms20i7qF1at3o99xL3YairOcnt7JxNWDWA=="
-      }
-    },
     "npm:@nx/nx-win32-x64-msvc@20.0.1": {
       "type": "npm",
       "name": "npm:@nx/nx-win32-x64-msvc@20.0.1",
@@ -2599,15 +2536,6 @@
         "version": "20.0.1",
         "packageName": "@nx/nx-win32-x64-msvc",
         "hash": "sha512-XwdzCKovf3Nw0Z5TfttAIK/kuj+zTvM76LOLp++Nv/QTNnNRH5wcry8Abhy1KU0LBJUGQj+iPJbPmBVrXy9E5Q=="
-      }
-    },
-    "npm:@nx/nx-win32-x64-msvc": {
-      "type": "npm",
-      "name": "npm:@nx/nx-win32-x64-msvc",
-      "data": {
-        "version": "19.8.2",
-        "packageName": "@nx/nx-win32-x64-msvc",
-        "hash": "sha512-rRt+XIZk+ctxhFORWvugqmS07xi52eRS4QpTq8b24ZJKk1Zw0L5opsXAdzughhBzfIpSx4rxnknFlI78DcRPxA=="
       }
     },
     "npm:@nx/workspace@20.0.1": {
@@ -4842,15 +4770,6 @@
         "hash": "sha512-TPJXq8JqFaVYm2CWmPvnP2Iyo4ZSM7/QKcSmuMLDObfpH5fi7RUGmd/rTDf+rut/saiDiQEeVTNgAmJEdAOx0w=="
       }
     },
-    "npm:end-of-stream": {
-      "type": "npm",
-      "name": "npm:end-of-stream",
-      "data": {
-        "version": "1.4.4",
-        "packageName": "end-of-stream",
-        "hash": "sha512-+uw1inIHVPQoaVuHzRyXd21icM+cnt4CzD5rW+NC1wjOUSTOs+Te7FOv7AhN7vS9x/oIyhLP5PR1H+phQAHu5Q=="
-      }
-    },
     "npm:enhanced-resolve": {
       "type": "npm",
       "name": "npm:enhanced-resolve",
@@ -6685,15 +6604,6 @@
         "version": "5.1.2",
         "packageName": "onetime",
         "hash": "sha512-kbpaSSGJTWdAY5KPVeMOKXSrPtr8C8C7wodJbcsd51jRnmD+GZu8Y0VoU6Dm5Z4vWr0Ig/1NKuWRKf7j5aaYSg=="
-      }
-    },
-    "npm:open": {
-      "type": "npm",
-      "name": "npm:open",
-      "data": {
-        "version": "8.4.2",
-        "packageName": "open",
-        "hash": "sha512-7x81NCL719oNbsq/3mh+hVrAWmFuEYUqrq/Iw3kUzH8ReypT9QQ0BLoJS7/G9k6N81XjW4qHWtjWwe/9eLy1EQ=="
       }
     },
     "npm:optionator": {
@@ -12657,11 +12567,6 @@
     },
     {
       "source": "npm:nx@20.0.1",
-      "target": "npm:open",
-      "type": "static"
-    },
-    {
-      "source": "npm:nx@20.0.1",
       "target": "npm:ora@5.3.0",
       "type": "static"
     },
@@ -14973,11 +14878,6 @@
     {
       "source": "npm:ejs",
       "target": "npm:jake",
-      "type": "static"
-    },
-    {
-      "source": "npm:end-of-stream",
-      "target": "npm:once",
       "type": "static"
     },
     {
@@ -17712,11 +17612,6 @@
     },
     {
       "source": "npm:nx",
-      "target": "npm:open",
-      "type": "static"
-    },
-    {
-      "source": "npm:nx",
       "target": "npm:ora@5.3.0",
       "type": "static"
     },
@@ -17838,21 +17733,6 @@
     {
       "source": "npm:onetime",
       "target": "npm:mimic-fn",
-      "type": "static"
-    },
-    {
-      "source": "npm:open",
-      "target": "npm:define-lazy-prop",
-      "type": "static"
-    },
-    {
-      "source": "npm:open",
-      "target": "npm:is-docker",
-      "type": "static"
-    },
-    {
-      "source": "npm:open",
-      "target": "npm:is-wsl",
       "type": "static"
     },
     {
@@ -18683,11 +18563,6 @@
     {
       "source": "npm:tar-stream",
       "target": "npm:bl",
-      "type": "static"
-    },
-    {
-      "source": "npm:tar-stream",
-      "target": "npm:end-of-stream",
       "type": "static"
     },
     {

@@ -1,4 +1,4 @@
-import { Body, Controller, Delete, Get, Logger, Param, Patch, Post, Put } from '@nestjs/common';
+import { Body, Controller, Delete, Get, Logger, Param, Patch, Post, Put, Query } from '@nestjs/common';
 import { ApiOperation, ApiResponse, ApiTags } from '@nestjs/swagger';
 import { livro } from 'src/common/database/entities/livro';
 import { LivrosService } from 'src/livros/services/livros/livros.service';
@@ -11,8 +11,11 @@ export class LivrosController {
 
   @Get()
   @ApiOperation({ summary: 'Busca todos os livros' })
-  findAll(): Promise<livro[]> {
-    return this.service.findAll();
+  findAll(
+    @Query('limit') limit: number = 5,
+    @Query('offset') offset: number = 0
+  ): Promise<livro[]> {
+    return this.service.findAll(limit, offset);
   }
 
   @Get(':id')

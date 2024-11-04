@@ -1,5 +1,5 @@
-import { Body, Controller, Delete, Get, Param, Patch, Post } from '@nestjs/common';
-import { ApiTags } from '@nestjs/swagger';
+import { Body, Controller, Delete, Get, Param, Patch, Post, Query } from '@nestjs/common';
+import { ApiQuery, ApiTags } from '@nestjs/swagger';
 import { LivroTeste } from 'src/common/database/entities/Livro_Teste';
 import { CreateLivroDto } from 'src/livros/dto/create-livro.dto';
 import { UpdateLivroDto } from 'src/livros_teste/dto/update-livro/update-livro';
@@ -16,8 +16,13 @@ export class LivrosTesteController {
 //   }
 
   @Get()
-  async findAll(): Promise<LivroTeste[]> {
-    return await this.service.findAll();
+  @ApiQuery({ name: 'limit', required: false, type: Number, description: 'Número máximo de registros a retornar' })
+  @ApiQuery({ name: 'offset', required: false, type: Number, description: 'Quantidade de registros a pular' })
+  async findAll(
+    @Query('limit') limit: number = 5,
+    @Query('offset') offset: number = 0
+  ): Promise<LivroTeste[]> {
+    return await this.service.findAll(limit, offset);
   }
 
   @Get(':id')

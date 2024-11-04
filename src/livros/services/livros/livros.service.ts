@@ -10,8 +10,11 @@ export class LivrosService {
     private readonly livroRepository: Repository<livro>,
   ) {}
 
-  findAll(): Promise<livro[]> {
-    return this.livroRepository.find();
+  findAll(limit: number, offset: number): Promise<livro[]> {
+    return this.livroRepository.find({
+      take: limit,
+      skip: offset
+    });
   }
 
   findById(id: number): Promise<livro> {

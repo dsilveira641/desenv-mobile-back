@@ -20,6 +20,9 @@
     "@nestjs/cli": "^10.0.0",
     "@nestjs/schematics": "^10.0.0",
     "@nestjs/testing": "^10.0.0",
+    "@nx/eslint": "19.8.2",
+    "@nx/eslint-plugin": "^20.0.1",
+    "@nx/jest": "19.8.2",
     "@types/express": "^4.17.17",
     "@types/jest": "^29.5.2",
     "@types/node": "^20.3.1",
@@ -30,6 +33,7 @@
     "eslint-config-prettier": "^9.0.0",
     "eslint-plugin-prettier": "^5.0.0",
     "jest": "^29.5.0",
+    "nx": "19.8.2",
     "prettier": "^3.0.0",
     "source-map-support": "^0.5.21",
     "supertest": "^7.0.0",
@@ -37,10 +41,7 @@
     "ts-loader": "^9.4.3",
     "ts-node": "^10.9.1",
     "tsconfig-paths": "^4.2.0",
-    "typescript": "^5.1.3",
-    "nx": "19.8.2",
-    "@nx/eslint": "19.8.2",
-    "@nx/jest": "19.8.2"
+    "typescript": "^5.1.3"
   },
   "pathMappings": {},
   "nxJsonPlugins": [
@@ -63,23 +64,27 @@
       "desenv-mobile-back": [
         {
           "file": ".env.example",
-          "hash": "12771939344879474902"
+          "hash": "8470712955097871156"
         },
         {
           "file": ".eslintrc.js",
-          "hash": "7461846271827386206"
+          "hash": "17487592752408938585"
         },
         {
           "file": ".gitignore",
-          "hash": "7222671897572685641"
+          "hash": "4957716235078961897"
         },
         {
           "file": ".prettierrc",
-          "hash": "4808572120966128913"
+          "hash": "5008776440579340246"
         },
         {
           "file": "README.md",
-          "hash": "10515070060548282188"
+          "hash": "8260370383811546906"
+        },
+        {
+          "file": "bash.exe.stackdump",
+          "hash": "4728120333320734855"
         },
         {
           "file": "bash.exe.stackdump",
@@ -87,23 +92,26 @@
         },
         {
           "file": "nest-cli.json",
-          "hash": "789240945379598733"
+          "hash": "18272654682417215031"
         },
         {
           "file": "nx.json",
-          "hash": "8536486036089993844"
+          "hash": "4081898076896064700"
         },
         {
           "file": "package-lock.json",
-          "hash": "8887601381384944039"
+          "hash": "18446018987425987209"
         },
         {
           "file": "package.json",
-          "hash": "12389324990202651766",
+          "hash": "9303498130461573328",
           "deps": [
             "npm:@nestjs/cli",
             "npm:@nestjs/schematics",
             "npm:@nestjs/testing",
+            "npm:@nx/eslint",
+            "npm:@nx/eslint-plugin",
+            "npm:@nx/jest",
             "npm:@types/express",
             "npm:@types/jest",
             "npm:@types/node",
@@ -114,6 +122,7 @@
             "npm:eslint-config-prettier",
             "npm:eslint-plugin-prettier",
             "npm:jest",
+            "npm:nx",
             "npm:prettier",
             "npm:source-map-support",
             "npm:supertest",
@@ -122,9 +131,6 @@
             "npm:ts-node",
             "npm:tsconfig-paths",
             "npm:typescript",
-            "npm:nx",
-            "npm:@nx/eslint",
-            "npm:@nx/jest",
             "npm:@nestjs/common",
             "npm:@nestjs/config",
             "npm:@nestjs/core",
@@ -148,55 +154,63 @@
         },
         {
           "file": "src/app.controller.spec.ts",
-          "hash": "2727664763654384995"
+          "hash": "3407876829745233448"
         },
         {
           "file": "src/app.controller.ts",
-          "hash": "4552329938751326480"
+          "hash": "1345450293891055440"
         },
         {
           "file": "src/app.module.ts",
-          "hash": "837750323854070162"
+          "hash": "15000711978786261181"
         },
         {
           "file": "src/app.service.ts",
-          "hash": "16892833931858030153"
+          "hash": "15275323873054081339"
         },
         {
           "file": "src/auth/auth.controller.spec.ts",
-          "hash": "14239920491639202077"
+          "hash": "11625570402663679261"
         },
         {
           "file": "src/auth/auth.controller.ts",
-          "hash": "11948384873573531426"
+          "hash": "3659223369317631631"
         },
         {
           "file": "src/auth/auth.guard.ts",
-          "hash": "10157423582913555741"
+          "hash": "17211214259614183679"
         },
         {
           "file": "src/auth/auth.module.ts",
-          "hash": "4680168391272493343"
+          "hash": "11520922132879048650"
         },
         {
           "file": "src/auth/auth.service.spec.ts",
-          "hash": "5442871165268080463"
+          "hash": "3531801313276079682"
         },
         {
           "file": "src/auth/auth.service.ts",
-          "hash": "5961955777522244093"
+          "hash": "7760275166950593117"
         },
         {
           "file": "src/auth/constants.ts",
-          "hash": "3806965517793785156"
+          "hash": "13325654895071238517"
         },
         {
           "file": "src/common/database/database.module.ts",
-          "hash": "16280931267529402637"
+          "hash": "3752283027491415159"
         },
         {
           "file": "src/common/database/database.provider.ts",
-          "hash": "14845453413858359521"
+          "hash": "8947387691816089400"
+        },
+        {
+          "file": "src/common/database/entities/Livro_Teste.ts",
+          "hash": "2444004175508099892"
+        },
+        {
+          "file": "src/common/database/entities/alunos.ts",
+          "hash": "9525341053601852854"
         },
         {
           "file": "src/common/database/entities/Disciplinas.ts",
@@ -208,11 +222,15 @@
         },
         {
           "file": "src/common/database/entities/emprestimo.ts",
-          "hash": "4487475160730412750"
+          "hash": "2337231802201714622"
         },
         {
           "file": "src/common/database/entities/livro.ts",
-          "hash": "7634308105756049302"
+          "hash": "12580247376880566155"
+        },
+        {
+          "file": "src/common/database/entities/professores.ts",
+          "hash": "15682515906641322961"
         },
         {
           "file": "src/common/database/entities/professores.ts",
@@ -220,19 +238,31 @@
         },
         {
           "file": "src/common/database/entities/users.ts",
-          "hash": "17111164989972372063"
+          "hash": "17655199431898286105"
         },
         {
           "file": "src/common/database/migrations/1725991485983-usuario.ts",
-          "hash": "17347571414363094012"
+          "hash": "4290062513935907420"
         },
         {
           "file": "src/common/database/migrations/1726018191510-livro.ts",
-          "hash": "10009345055313298937"
+          "hash": "4602307145564928272"
         },
         {
           "file": "src/common/database/migrations/1726019357843-emprestimo.ts",
-          "hash": "6312966152882432960"
+          "hash": "17381298589658322789"
+        },
+        {
+          "file": "src/common/database/migrations/1726848833251-alunos.ts",
+          "hash": "7579359585333213999"
+        },
+        {
+          "file": "src/common/database/migrations/1727290445927-professores.ts",
+          "hash": "4875304146151410641"
+        },
+        {
+          "file": "src/common/database/migrations/1727291825356-disciplinas.ts",
+          "hash": "8353085834188897055"
         },
         {
           "file": "src/common/database/migrations/1726848833251-alunos.ts",
@@ -268,91 +298,127 @@
         },
         {
           "file": "src/emprestimo/controllers/emprestimos/emprestimos.controller.spec.ts",
-          "hash": "14769417430339958768"
+          "hash": "16471623992992070342"
         },
         {
           "file": "src/emprestimo/controllers/emprestimos/emprestimos.controller.ts",
-          "hash": "12832875066381829992"
+          "hash": "12915114488579988216"
         },
         {
           "file": "src/emprestimo/modules/emprestimos/emprestimos.module.ts",
-          "hash": "6544205200387287817"
+          "hash": "3804888944792280996"
         },
         {
           "file": "src/emprestimo/services/emprestimos/emprestimos.service.spec.ts",
-          "hash": "17560636266682294214"
+          "hash": "8634738221800088163"
         },
         {
           "file": "src/emprestimo/services/emprestimos/emprestimos.service.ts",
-          "hash": "13644980713489154583"
+          "hash": "16486777798550593344"
         },
         {
           "file": "src/livros/controllers/livros/livros.controller.spec.ts",
-          "hash": "8256128163545712661"
+          "hash": "14254440512689109354"
         },
         {
           "file": "src/livros/controllers/livros/livros.controller.ts",
-          "hash": "11644486507827493898"
+          "hash": "2388881608192203007"
         },
         {
           "file": "src/livros/dto/create-livro.dto.ts",
-          "hash": "7011439265328796992"
+          "hash": "10608884586076977595"
         },
         {
           "file": "src/livros/modules/livros/livros.module.ts",
-          "hash": "14300116262554978923"
+          "hash": "16807604961596950883"
         },
         {
           "file": "src/livros/services/livros/livros.service.spec.ts",
-          "hash": "13033347876511232121"
+          "hash": "9357720453434622472"
         },
         {
           "file": "src/livros/services/livros/livros.service.ts",
-          "hash": "14723346640883434554"
+          "hash": "2592821360716913308"
+        },
+        {
+          "file": "src/livros_teste/controllers/livros-teste/livros-teste.controller.spec.ts",
+          "hash": "11420363421626315819"
+        },
+        {
+          "file": "src/livros_teste/controllers/livros-teste/livros-teste.controller.ts",
+          "hash": "14062026289559164093"
+        },
+        {
+          "file": "src/livros_teste/dto/create-livro/create-livro.spec.ts",
+          "hash": "34536917502622574"
+        },
+        {
+          "file": "src/livros_teste/dto/create-livro/create-livro.ts",
+          "hash": "5665803846966506161"
+        },
+        {
+          "file": "src/livros_teste/dto/update-livro/update-livro.spec.ts",
+          "hash": "15758228148380016834"
+        },
+        {
+          "file": "src/livros_teste/dto/update-livro/update-livro.ts",
+          "hash": "1346438143082107091"
+        },
+        {
+          "file": "src/livros_teste/modules/livros-teste/livros-teste.module.ts",
+          "hash": "11138302373419108135"
+        },
+        {
+          "file": "src/livros_teste/services/livros-teste/livros-teste.service.spec.ts",
+          "hash": "8865474840009226973"
+        },
+        {
+          "file": "src/livros_teste/services/livros-teste/livros-teste.service.ts",
+          "hash": "7803983586276425344"
         },
         {
           "file": "src/main.ts",
-          "hash": "7142462951309515002"
+          "hash": "2862017075753560293"
         },
         {
           "file": "src/users/controllers/users.controller.spec.ts",
-          "hash": "1125871965926193611"
+          "hash": "8699128022186479650"
         },
         {
           "file": "src/users/controllers/users.controller.ts",
-          "hash": "12050288520172062721"
+          "hash": "15743870243264357846"
         },
         {
           "file": "src/users/dto/create-user.dto.ts",
-          "hash": "6163379494398570939"
+          "hash": "12898949011559351813"
         },
         {
           "file": "src/users/modules/users.module.ts",
-          "hash": "1185590006408887291"
+          "hash": "3953340800228287820"
         },
         {
           "file": "src/users/services/users.service.spec.ts",
-          "hash": "1672556035186221811"
+          "hash": "3559717450305491372"
         },
         {
           "file": "src/users/services/users.service.ts",
-          "hash": "1085157108101808519"
+          "hash": "7062540879893305583"
         },
         {
           "file": "test/app.e2e-spec.ts",
-          "hash": "15142680097789702029"
+          "hash": "15404927841147059589"
         },
         {
           "file": "test/jest-e2e.json",
-          "hash": "7570273541430074424"
+          "hash": "10645908491471703423"
         },
         {
           "file": "tsconfig.build.json",
-          "hash": "276845246908739715"
+          "hash": "9666801268768259513"
         },
         {
           "file": "tsconfig.json",
-          "hash": "1876265833229380624"
+          "hash": "9174465598568239903"
         }
       ]
     }

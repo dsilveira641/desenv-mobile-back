@@ -19,7 +19,14 @@ export class LivrosTesteService {
     async findAll(limit: number, offset: number): Promise<LivroTeste[]> {
         return await this.livroRepository.find({
             take: limit,
-            skip: offset
+            skip: offset,
+            select: {
+                id: true,
+                titulo: true,
+                autor: true,
+                disponivel: true,
+                quantidade: true
+            }
         });
     }
 

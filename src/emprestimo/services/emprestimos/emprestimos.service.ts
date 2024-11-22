@@ -1,30 +1,36 @@
 import {
   BadRequestException,
   Injectable,
+  Logger,
   NotFoundException,
 } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Emprestimo } from 'src/common/database/entities/emprestimo';
-import { livro } from 'src/common/database/entities/livro';
+import { LivroTeste } from 'src/common/database/entities/Livro_Teste';
 import { User } from 'src/common/database/entities/users';
 import { Repository } from 'typeorm';
 
 @Injectable()
 export class EmprestimosService {
+  private readonly logger = new Logger();
   constructor(
     @InjectRepository(Emprestimo)
     private readonly emprestimoRepository: Repository<Emprestimo>,
-    @InjectRepository(livro)
-    private readonly livroRepository: Repository<livro>,
+    @InjectRepository(LivroTeste)
+    private readonly livroRepository: Repository<LivroTeste>,
     @InjectRepository(User)
     private readonly userRepository: Repository<User>,
   ) {}
 
   async alugarLivro(usuarioId: number, livroId: number): Promise<Emprestimo> {
+    
     const livro = await this.livroRepository.findOne({
       where: { id: livroId },
     });
     if (!livro || livro.quantidade < 1) {
+      this.logger.debug('[alugarLivro]', usuarioId, livroId);
+      this.logger.log('[alugarLivro]', usuarioId, livroId);
+
       throw new BadRequestException('Livro indisponível para aluguel');
     }
 

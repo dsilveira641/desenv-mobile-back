@@ -1,9 +1,19 @@
-import { Body, Controller, Delete, Get, Logger, Param, Patch, Post, Put, Query } from '@nestjs/common';
-import { ApiOperation, ApiResponse, ApiTags } from '@nestjs/swagger';
+import {
+  Body,
+  Controller,
+  Delete,
+  Get,
+  Logger,
+  Param,
+  Patch,
+  Post,
+  Query,
+} from '@nestjs/common';
+import { ApiOperation, ApiQuery, ApiResponse, ApiTags } from '@nestjs/swagger';
 import { livro } from 'src/common/database/entities/livro';
 import { LivrosService } from 'src/livros/services/livros/livros.service';
 
-@ApiTags("Livros")
+@ApiTags('Livros')
 @Controller('livros')
 export class LivrosController {
   private readonly logger = new Logger(LivrosController.name);
@@ -11,9 +21,21 @@ export class LivrosController {
 
   @Get()
   @ApiOperation({ summary: 'Busca todos os livros' })
+  @ApiQuery({
+    name: 'limit',
+    required: false,
+    type: Number,
+    description: 'Número máximo de registros a retornar',
+  })
+  @ApiQuery({
+    name: 'offset',
+    required: false,
+    type: Number,
+    description: 'Quantidade de registros a pular',
+  })
   findAll(
     @Query('limit') limit: number = 5,
-    @Query('offset') offset: number = 0
+    @Query('offset') offset: number = 0,
   ): Promise<livro[]> {
     return this.service.findAll(limit, offset);
   }

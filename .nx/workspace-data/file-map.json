@@ -96,7 +96,7 @@
         },
         {
           "file": "package-lock.json",
-          "hash": "7838598827107268297"
+          "hash": "15685861193899640345"
         },
         {
           "file": "package.json",
@@ -214,11 +214,11 @@
         },
         {
           "file": "src/common/database/entities/emprestimo.ts",
-          "hash": "4487475160730412750"
+          "hash": "4790877103166725614"
         },
         {
           "file": "src/common/database/entities/livro.ts",
-          "hash": "7634308105756049302"
+          "hash": "8750792050459470089"
         },
         {
           "file": "src/common/database/entities/professores.ts",
@@ -253,6 +253,22 @@
           "hash": "13924808121079921311"
         },
         {
+          "file": "src/common/database/migrations/1732298167908-Livros.ts",
+          "hash": "12460982122092501418"
+        },
+        {
+          "file": "src/common/database/migrations/1732300748389-Livros.ts",
+          "hash": "6301989572923014805"
+        },
+        {
+          "file": "src/common/database/migrations/1732301895825-Emprestimo.ts",
+          "hash": "43596282058559054"
+        },
+        {
+          "file": "src/common/database/migrations/1732302456539-Emprestimo.ts",
+          "hash": "3165048383795148677"
+        },
+        {
           "file": "src/disciplinas/controllers/disciplinas/disciplinas.controller.spec.ts",
           "hash": "12715432556033458700"
         },
@@ -282,7 +298,7 @@
         },
         {
           "file": "src/emprestimo/modules/emprestimos/emprestimos.module.ts",
-          "hash": "6544205200387287817"
+          "hash": "15755561533794795859"
         },
         {
           "file": "src/emprestimo/services/emprestimos/emprestimos.service.spec.ts",
@@ -290,7 +306,7 @@
         },
         {
           "file": "src/emprestimo/services/emprestimos/emprestimos.service.ts",
-          "hash": "13644980713489154583"
+          "hash": "9007711073678286276"
         },
         {
           "file": "src/livros/controllers/livros/livros.controller.spec.ts",
@@ -298,7 +314,7 @@
         },
         {
           "file": "src/livros/controllers/livros/livros.controller.ts",
-          "hash": "10778999440892719798"
+          "hash": "13666273604131099910"
         },
         {
           "file": "src/livros/dto/create-livro.dto.ts",
@@ -314,7 +330,7 @@
         },
         {
           "file": "src/livros/services/livros/livros.service.ts",
-          "hash": "17909639803120794853"
+          "hash": "6459972295284330750"
         },
         {
           "file": "src/livros_teste/controllers/livros-teste/livros-teste.controller.spec.ts",

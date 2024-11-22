@@ -13,7 +13,15 @@ export class LivrosService {
   findAll(limit: number, offset: number): Promise<livro[]> {
     return this.livroRepository.find({
       take: limit,
-      skip: offset
+      skip: offset,
+      select: {
+        id: true,
+        titulo: true,
+        autor: true,
+        disponivel: true,
+        quantidade: true,
+        ano: true,
+      },
     });
   }
 

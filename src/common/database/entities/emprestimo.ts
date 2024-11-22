@@ -5,17 +5,17 @@ import {
   ManyToOne,
   PrimaryGeneratedColumn,
 } from 'typeorm';
-import { livro } from './livro';
 import { User } from './users';
+import { LivroTeste } from './Livro_Teste';
 
 @Entity({ name: 'emprestimo' })
 export class Emprestimo {
   @PrimaryGeneratedColumn({ name: 'EMP_Id' })
   id: number;
 
-  @ManyToOne(() => livro, (livro) => livro.id)
+  @ManyToOne(() => LivroTeste, (livro) => livro.id)
   @JoinColumn({ name: 'EMP_LivroId' })
-  livro: livro;
+  livro: LivroTeste;
 
   @ManyToOne(() => User, (usuario) => usuario.id)
   @JoinColumn({ name: 'EMP_UsuarioId' })

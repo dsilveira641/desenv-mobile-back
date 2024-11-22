@@ -1,18 +1,18 @@
 {
   "run": {
-    "command": "nx migration:show",
-    "startTime": "2024-09-28T19:07:54.066Z",
-    "endTime": "2024-09-28T19:08:00.458Z",
+    "command": "nx build",
+    "startTime": "2024-11-22T14:47:14.338Z",
+    "endTime": "2024-11-22T14:47:19.805Z",
     "inner": false
   },
   "tasks": [
     {
-      "taskId": "desenv-mobile-back:migration:show",
-      "target": "migration:show",
+      "taskId": "desenv-mobile-back:build",
+      "target": "build",
       "projectName": "desenv-mobile-back",
-      "hash": "12403791757500362464",
-      "startTime": "2024-09-28T19:07:54.081Z",
-      "endTime": "2024-09-28T19:08:00.457Z",
+      "hash": "5020150817290742392",
+      "startTime": "2024-11-22T14:47:14.353Z",
+      "endTime": "2024-11-22T14:47:19.804Z",
       "params": "",
       "cacheStatus": "cache-miss",
       "status": 0

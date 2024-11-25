@@ -6,7 +6,7 @@ import {
 } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Emprestimo } from 'src/common/database/entities/emprestimo';
-import { LivroTeste } from 'src/common/database/entities/Livro_Teste';
+import { livro } from 'src/common/database/entities/livro';
 import { User } from 'src/common/database/entities/users';
 import { Repository } from 'typeorm';
 
@@ -16,8 +16,8 @@ export class EmprestimosService {
   constructor(
     @InjectRepository(Emprestimo)
     private readonly emprestimoRepository: Repository<Emprestimo>,
-    @InjectRepository(LivroTeste)
-    private readonly livroRepository: Repository<LivroTeste>,
+    @InjectRepository(livro)
+    private readonly livroRepository: Repository<livro>,
     @InjectRepository(User)
     private readonly userRepository: Repository<User>,
   ) {}
@@ -28,9 +28,6 @@ export class EmprestimosService {
       where: { id: livroId },
     });
     if (!livro || livro.quantidade < 1) {
-      this.logger.debug('[alugarLivro]', usuarioId, livroId);
-      this.logger.log('[alugarLivro]', usuarioId, livroId);
-
       throw new BadRequestException('Livro indisponível para aluguel');
     }
 

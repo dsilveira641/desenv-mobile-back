@@ -22,8 +22,20 @@ export class EmprestimosService {
     private readonly userRepository: Repository<User>,
   ) {}
 
-  async alugarLivro(usuarioId: number, livroId: number): Promise<Emprestimo> {
-    
+  async alugarLivro(
+    usuarioId: number,
+    livroId: number,
+  ): Promise<{
+    message: string;
+    emprestimo: {
+      titulo: string;
+      autor: string;
+      locado: boolean;
+      nome: string;
+      email: string;
+      tipo: string;
+    };
+  }> {
     const livro = await this.livroRepository.findOne({
       where: { id: livroId },
     });
@@ -42,7 +54,7 @@ export class EmprestimosService {
       where: {
         livro: { id: livroId },
         usuario: { id: usuarioId },
-        dataDevolucao: null,
+        locado: true,
       },
     });
     if (emprestimoExistente) {
@@ -57,8 +69,20 @@ export class EmprestimosService {
     emprestimo.livro = livro;
     emprestimo.usuario = usuario;
     emprestimo.dataEmprestimo = new Date();
+    emprestimo.locado = true;
 
-    return this.emprestimoRepository.save(emprestimo);
+    const emprestimoSalvo = await this.emprestimoRepository.save(emprestimo);
+    return {
+      message: 'Livro alugado com sucesso!',
+      emprestimo: {
+        titulo: emprestimoSalvo.livro.titulo,
+        autor: emprestimoSalvo.livro.autor,
+        locado: emprestimoSalvo.locado,
+        nome: usuario.nome,
+        email: usuario.email,
+        tipo: usuario.tipo,
+      },
+    };
   }
 
   async devolverLivro(usuarioId: number, livroId: number): Promise<Emprestimo> {
@@ -79,6 +103,7 @@ export class EmprestimosService {
 
     // Atualiza a data de devolução dom a data atual
     emprestimo.dataDevolucao = new Date();
+    emprestimo.locado = false;
     await this.emprestimoRepository.save(emprestimo);
 
     const livro = emprestimo.livro;
@@ -88,7 +113,39 @@ export class EmprestimosService {
     return emprestimo;
   }
 
-  async findAll(): Promise<any[]> {
+  async findAllActives(): Promise<any[]> {
+    const emprestimos = await this.emprestimoRepository
+      .createQueryBuilder('emprestimo')
+      .leftJoinAndSelect('emprestimo.livro', 'livro')
+      .leftJoinAndSelect('emprestimo.usuario', 'usuario')
+      .where('emprestimo.locado IS true')
+      .select([
+        'emprestimo.id',
+        'emprestimo.dataEmprestimo',
+        'emprestimo.dataDevolucao',
+        'emprestimo.locado',
+        'livro.titulo',
+        'livro.id',
+        'livro.autor',
+        'usuario.nome',
+        'usuario.id',
+      ])
+      .getMany();
+
+    return emprestimos.map((emprestimo) => ({
+      id: emprestimo.id,
+      dataEmprestimo: emprestimo.dataEmprestimo,
+      dataDevolucao: emprestimo.dataDevolucao,
+      locado: emprestimo.locado,
+      livroTitulo: emprestimo.livro.titulo,
+      livroAutor: emprestimo.livro.autor,
+      usuarioNome: emprestimo.usuario.nome,
+      usuarioId: emprestimo.usuario.id,
+      livroId: emprestimo.livro.id,
+    }));
+  }
+
+  async historic(): Promise<any[]> {
     const emprestimos = await this.emprestimoRepository.find({
       relations: ['livro', 'usuario'],
       select: {
@@ -103,15 +160,21 @@ export class EmprestimosService {
           nome: true,
         },
       },
+      where: {
+        dataDevolucao: null,
+      },
     });
 
     return emprestimos.map((emprestimo) => ({
       id: emprestimo.id,
       dataEmprestimo: emprestimo.dataEmprestimo,
       dataDevolucao: emprestimo.dataDevolucao,
+      locado: emprestimo.locado,
       livroTitulo: emprestimo.livro.titulo,
       livroAutor: emprestimo.livro.autor,
       usuarioNome: emprestimo.usuario.nome,
+      usuarioId: emprestimo.usuario.id,
+      livroId: emprestimo.livro.id,
     }));
   }
 }

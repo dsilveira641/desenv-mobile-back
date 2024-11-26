@@ -6,16 +6,16 @@ import {
   PrimaryGeneratedColumn,
 } from 'typeorm';
 import { User } from './users';
-import { LivroTeste } from './Livro_Teste';
+import { livro } from './livro';
 
 @Entity({ name: 'emprestimo' })
 export class Emprestimo {
   @PrimaryGeneratedColumn({ name: 'EMP_Id' })
   id: number;
 
-  @ManyToOne(() => LivroTeste, (livro) => livro.id)
+  @ManyToOne(() => livro, (livro) => livro.id)
   @JoinColumn({ name: 'EMP_LivroId' })
-  livro: LivroTeste;
+  livro: livro;
 
   @ManyToOne(() => User, (usuario) => usuario.id)
   @JoinColumn({ name: 'EMP_UsuarioId' })
@@ -26,4 +26,7 @@ export class Emprestimo {
 
   @Column({ name: 'EMP_DataDevolucao', type: 'date', nullable: true })
   dataDevolucao: Date;
+
+  @Column({ name: 'EMP_ISLOCATED', type: 'boolean' })
+  locado: boolean;
 }
